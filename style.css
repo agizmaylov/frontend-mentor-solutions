@@ -1,0 +1,113 @@
+/*=== Normalize and reset ===*/
+:root {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+* {
+    margin: 0;
+}
+
+body {
+    -webkit-font-smoothing: antialiased;
+}
+
+/*=== Normalize and reset end ===*/
+
+:root {
+    --color-page-background: #e6e7ea;
+    --color-card-background: white;
+    --color-text: #6e788c;
+    --color-accent: #5294e2;
+    --color-visited-link: #d17ad1;
+
+    --layout-spacing: max(1rem, 1.5vw);
+
+    --font-n: clamp(1rem, 0.93rem + 0.348vw, 1.2rem);
+    --font-l: calc(var(--font-n) * 2);
+}
+
+body {
+    min-height: 100vh;
+
+    background-color: var(--color-page-background);
+    color: var(--color-text);
+
+    font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    text-align: center;
+}
+
+.header {
+    margin: 1em 0;
+    font-size: var(--font-l);
+    text-wrap: balance;
+    line-height: 2.38ex;
+}
+
+.solutions-container {
+    margin: 0 auto;
+    padding: 0 var(--layout-spacing) var(--layout-spacing);
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--layout-spacing);
+
+    list-style-type: none;
+}
+
+.solution {
+    flex-grow: 1;
+
+    /* width: min(250px, 40%); */
+    width: max(250px, 40%);
+    padding: calc(var(--layout-spacing) * 0.6);
+    border: solid 1px black;
+
+    background-color: var(--color-card-background);
+    border-radius: calc(var(--layout-spacing) * 0.6);
+    box-shadow: 0 0 var(--layout-spacing) rgba(0, 0, 0, 0.2);
+
+    &:hover,
+    &:active {
+        box-shadow: 0 0 var(--layout-spacing) var(--color-accent);
+    }
+}
+
+.solution__link {
+    text-decoration: none;
+
+    &:link {
+        color: var(--color-text);
+    }
+
+    &:visited {
+        color: var(--color-visited-link);
+    }
+}
+
+.solution__image {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 0.25rem;
+}
+
+.solution__title {
+    margin-top: calc(var(--layout-spacing) * 0.4);
+    text-wrap: pretty;
+    font-size: var(--font-n);
+    line-height: 2.63ex;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --color-page-background: #353945;
+        --color-card-background: #404552;
+        --color-text: #d3dae3;
+    }
+}

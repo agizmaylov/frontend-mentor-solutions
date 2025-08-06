@@ -1,0 +1,109 @@
+@font-face {
+    font-family: "Kumbh Sans";
+    src: local("Kumbh Sans"),
+         url("KumbhSans-VariableFont_YOPQ,wght.woff2") format(woff2) tech(variations),
+         url("KumbhSans-VariableFont_YOPQ,wght.woff2") format("woff2-variations");
+    font-weight: 100 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+:root {
+    --font-large: clamp(1.125rem, 1.09rem + 0.174vw, 1.225rem);
+    --font-medium: calc(var(--font-large) * 0.8);
+    --font-small: calc(var(--font-large) * 0.53);
+
+    --color-cyan: hsl(185, 75%, 39%);
+    --color-dark-blue: hsl(229, 23%, 23%);
+    --color-gray-blue-hsl: 0, 0%, 59%;
+}
+
+* {
+    margin: 0;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: var(--color-cyan);
+    background-image: url("images/bg-pattern-top.svg"),
+                      url("images/bg-pattern-bottom.svg");
+    background-position: calc(50vw - 996px) calc(50vh - 900px),
+                         50vw 50vh;
+    background-repeat: no-repeat;
+}
+
+.profile-card {
+    width: min(100%, 350px);
+    margin: 1.5rem;
+
+    display: flex;
+    flex-direction: column;
+
+    background-color: white;
+    background-image: url("images/bg-pattern-card.svg");
+    background-repeat: no-repeat;
+
+    border-radius: 1rem;
+    box-shadow: hsla(227, 10%, 46%, 0.445) 0 5rem 5rem;
+
+    font-family: "Kumbh Sans", system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-size: var(--font-large);
+    text-align: center;
+}
+
+.profile-photo {
+    width: 96px;
+    height: 96px;
+    margin-top: 87px;
+    border: solid 5px white;
+    border-radius: 50%;
+    align-self: center;
+}
+
+.name-age-location {
+    margin-top: calc(1.3em - 5px);
+    margin-bottom: 1.3em;
+}
+
+
+.name {
+    font-weight: bold;
+    color: var(--color-dark-blue);
+}
+
+.age {
+    margin-left: 0.3em;
+    color: hsl(var(--color-gray-blue-hsl));
+}
+
+.location {
+    margin-top: 0.56em;
+    font-size: var(--font-medium);
+    color: hsl(var(--color-gray-blue-hsl));
+}
+
+.social-metrics {
+    padding: 1.3em 0;
+    border-top: 1px solid hsla(var(--color-gray-blue-hsl), 0.3);
+
+    display: flex;
+    justify-content: space-evenly;
+
+    list-style-type: none;
+}
+
+.social-metric-counter {
+    font-weight: bold;
+    color: var(--color-dark-blue);
+}
+
+.social-metric-text {
+    margin-top: 0.4em;
+    font-size: var(--font-small);
+    color: hsl(var(--color-gray-blue-hsl));
+    letter-spacing: 0.15em;
+}
