@@ -9,7 +9,7 @@ This is a solution to the [Profile card component challenge on Frontend Mentor](
 ## Links
 
 - Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: https://agizmaylov.github.io/frontend-mentor-solutions/profile-card-component
 
 ## Built with
 
@@ -17,6 +17,3 @@ This is a solution to the [Profile card component challenge on Frontend Mentor](
 - CSS custom properties
 - Flexbox
 - Fluid typography
-
-## Author
-- Frontend Mentor - [@agizmaylov](https://www.frontendmentor.io/profile/agizmaylov)
