@@ -29,10 +29,11 @@ body {
     --layout-spacing: max(1rem, 1.5vw);
 
     --font-n: clamp(1rem, 0.93rem + 0.348vw, 1.2rem);
-    --font-l: calc(var(--font-n) * 2);
+    --font-l: calc(var(--font-n) * 1.5);
+    --font-xl: calc(var(--font-n) * 2);
 }
 
-body {
+.page-solutions {
     min-height: 100vh;
 
     background-color: var(--color-page-background);
@@ -44,6 +45,13 @@ body {
 
 .header {
     margin: 1em 0;
+    font-size: var(--font-xl);
+    text-wrap: balance;
+    line-height: 2.38ex;
+}
+
+.heading {
+    margin: 0.5em 0;
     font-size: var(--font-l);
     text-wrap: balance;
     line-height: 2.38ex;
@@ -78,7 +86,8 @@ body {
     }
 }
 
-.solution__link {
+.solution__live-link,
+.solution__github-link {
     text-decoration: none;
 
     &:link {
@@ -98,10 +107,23 @@ body {
 }
 
 .solution__title {
-    margin-top: calc(var(--layout-spacing) * 0.4);
+    margin: calc(var(--layout-spacing) * 0.4) 0;
     text-wrap: pretty;
     font-size: var(--font-n);
     line-height: 2.63ex;
+}
+
+.solution__github-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: var(--font-n);
+}
+
+.solution__github-logo {
+    height: 1em;
+    margin-left: 0.3em;
+    width: auto;
 }
 
 @media (prefers-color-scheme: dark) {
