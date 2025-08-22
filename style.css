@@ -61,18 +61,14 @@ body {
     margin: 0 auto;
     padding: 0 var(--layout-spacing) var(--layout-spacing);
 
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(40ch, 1fr));
     gap: var(--layout-spacing);
 
     list-style-type: none;
 }
 
 .solution {
-    flex-grow: 1;
-
-    /* width: min(250px, 40%); */
-    width: max(250px, 40%);
     padding: calc(var(--layout-spacing) * 0.6);
     border: solid 1px black;
 
@@ -101,14 +97,15 @@ body {
 
 .solution__image {
     display: block;
+    object-fit: cover;
     width: 100%;
-    height: auto;
+    max-height: 40vh;
     border-radius: 0.25rem;
 }
 
 .solution__title {
     margin: calc(var(--layout-spacing) * 0.4) 0;
-    text-wrap: pretty;
+    text-wrap: balance;
     font-size: var(--font-n);
     line-height: 2.63ex;
 }
@@ -122,8 +119,8 @@ body {
 
 .solution__github-logo {
     height: 1em;
-    margin-left: 0.3em;
     width: auto;
+    margin-left: 0.3em;
 }
 
 @media (prefers-color-scheme: dark) {
