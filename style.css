@@ -76,8 +76,7 @@ body {
     border-radius: calc(var(--layout-spacing) * 0.6);
     box-shadow: 0 0 var(--layout-spacing) rgba(0, 0, 0, 0.2);
 
-    &:hover,
-    &:active {
+    &:hover {
         box-shadow: 0 0 var(--layout-spacing) var(--color-accent);
     }
 }
