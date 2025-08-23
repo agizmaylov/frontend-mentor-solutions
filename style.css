@@ -81,6 +81,7 @@ body {
     }
 }
 
+.header__link,
 .solution__live-link,
 .solution__github-link {
     text-decoration: none;
