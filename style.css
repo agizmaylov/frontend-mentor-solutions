@@ -120,7 +120,7 @@ body {
 .solution__github-logo {
     height: 1em;
     width: auto;
-    margin-left: 0.3em;
+    margin-right: 0.22em;
 }
 
 @media (prefers-color-scheme: dark) {
